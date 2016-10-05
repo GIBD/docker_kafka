@@ -2,9 +2,9 @@ FROM gibdfrcu/base
 
 MAINTAINER Ramiro Rivera <ramarivera@gmail.com> 
 
-ENV KAFKA_VERSION="0.10.0.1" \
-	SCALA_VERSION="2.11"
-ENV KAFKA_HOME /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
+ENV KAFKA_VERSION="0.10.0.1"
+ENV	SCALA_VERSION="2.11"
+ENV KAFKA_HOME=/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
 
 ADD download-kafka.sh /tmp/download-kafka.sh
 ADD start-kafka.sh /usr/bin/start-kafka.sh
