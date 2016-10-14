@@ -7,7 +7,7 @@ ENV KAFKA_VERSION="0.10.0.1" \
 	KAFKA_HOME=/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
 
 COPY download-kafka.sh /tmp
-COPY ["start-kafka.sh", "broker-list.sh", "create-topics.sh" "/usr/bin"]
+COPY ["start-kafka.sh", "broker-list.sh", "create-topics.sh", "/usr/bin"]
 
 # COPY download-kafka.sh /tmp/download-kafka.sh
 # COPY start-kafka.sh /usr/bin/start-kafka.sh
