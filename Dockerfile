@@ -3,8 +3,8 @@ FROM gibdfrcu/base
 MAINTAINER Ramiro Rivera <ramarivera@gmail.com> 
 
 ENV KAFKA_VERSION="0.10.0.1" \
-	SCALA_VERSION="2.11" \
-	KAFKA_HOME=/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
+	SCALA_VERSION="2.11"
+ENV	KAFKA_HOME=/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
 
 COPY download-kafka.sh /tmp
 COPY ["start-kafka.sh", "broker-list.sh", "create-topics.sh", "/usr/bin/"]
