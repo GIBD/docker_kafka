@@ -1,8 +1,8 @@
-FROM gibdfrcu/base:alpine
+FROM gibdfrcu/base:alpine_jdk1.8.112_py2.7.12
 
 MAINTAINER Ramiro Rivera <ramarivera@gmail.com> 
 
-ENV KAFKA_VERSION="0.10.0.1" \
+ENV KAFKA_VERSION="0.10.1.0" \
 	SCALA_VERSION="2.11"
 ENV	KAFKA_HOME=/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
 
