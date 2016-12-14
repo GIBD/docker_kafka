@@ -13,5 +13,5 @@ TODO
 # Tags
 Available tags:
 - ```latest```
-- ```alpine_2.11_0.10.0.1 ```: Kafka 0.10.0.1 running on top of Scala 2.11
-- ```alpine_2.11_0.10.1.0 ```: Kafka 0.10.1.0 running on top of Scala 2.11
+- ```alpine_jdk1.8.112_scala2.11_0.10.0.1 ```: Kafka 0.10.0.1 running on top of Scala 2.11 (Java 1.8.112)
+- ```alpine_jdk1.8.112_scala2.11_0.10.1.0 ```: Kafka 0.10.1.0 running on top of Scala 2.11 (Java 1.8.112)
