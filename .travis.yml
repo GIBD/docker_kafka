@@ -1,0 +1,21 @@
+sudo: required
+services:
+  - docker
+
+language: python
+python:
+  - 3.6
+
+install:
+  - docker build -t kafka ./alpine/2.11-0.10.0.1
+  - docker run -d -p 127.0.0.1:80:80 --name kafka kafka
+
+script:
+  - docker ps | grep -q kafka
+
+notifications:
+  slack: frcubigdata:UHa7tsq87e6C0xd0C8es5CQO
+
+branches:
+  only:
+    - master
