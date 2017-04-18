@@ -1,18 +1,13 @@
-FROM gibdbigdata/base:alpine_jdk1.8_py2.7
+FROM gibdbigdata/base::CI_SO::CI_SO_VER:_jdk1.:CI_JAVA_MAJOR:_py:CI_PY_VER:
 
 MAINTAINER Ramiro Rivera <ramarivera@gmail.com> 
 
-ENV KAFKA_VERSION="0.10.0.1" \
-	SCALA_VERSION="2.11"
+ENV KAFKA_VERSION=:CI_KAFKA_VER: \
+	SCALA_VERSION=:CI_SCALA_VER:
 ENV	KAFKA_HOME=/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}
 
 COPY download-kafka.sh /tmp
 COPY ["start-kafka.sh", "broker-list.sh", "create-topics.sh", "/usr/bin/"]
-
-# COPY download-kafka.sh /tmp/download-kafka.sh
-# COPY start-kafka.sh /usr/bin/start-kafka.sh
-# COPY broker-list.sh /usr/bin/broker-list.sh
-# COPY create-topics.sh /usr/bin/create-topics.sh
 
 RUN chmod +x /tmp/download-kafka.sh && \
  	chmod +x /usr/bin/create-topics.sh && \
