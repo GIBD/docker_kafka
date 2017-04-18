@@ -3,8 +3,8 @@
 set -eu
 
 message="Hello World"
-image_tag="${CI_SO}${CI_SO_VER}_jdk1.${CI_JAVA_MAJOR}_py${CI_PY_VER}"
-image_name="base:${image_tag}"
+image_tag="${CI_SO}${CI_SO_VER}_jdk1.${CI_JAVA_MAJOR}_scala${CI_SCALA_VER}_${CI_KAFKA_VER}"
+image_name="${CI_IMAGE_NAME}:${image_tag}"
 
 echo_result=`docker run --name ${image_tag}01 ${image_name} echo ${message}`
 echo_result2="$(docker run --name ${image_tag}02 ${image_name} echo ${message})"

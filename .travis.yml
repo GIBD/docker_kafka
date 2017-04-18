@@ -16,6 +16,7 @@ env:
   global:
     - CI_IMAGE_NAME=kafka
     - CI_SO=alpine
+    - CI_DOCKER_USER=gibdbigdata
     - secure: "oFD/tic8JAwpMXuMDBZXV4ot6w1NLWvHQnrDKmUHSMQJC1cbbrR1p5q8XayfjtmdqQdFQmIfM6YHEKeHw//ypgObWjYS8q00OaaMDXPTdmgr1Ee4nhgkkDihT+kVij0rn96W/QvyAVoaV5hJoyUr3Nhk+mnHEYm3M+Q3LAQglRg="
   matrix:
     - CI_SO_VER=3.4 CI_JAVA_MAJOR=8  CI_JAVA_MINOR=112  CI_JAVA_BUILD=15  CI_PY_VER=2.7 CI_PY_BUILD=12-r0  CI_PIP_VER=8.1.2-r0 CI_KAFKA_VER=0.10.0.1 CI_SCALA_VER=2.11
