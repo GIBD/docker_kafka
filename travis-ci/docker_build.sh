@@ -2,8 +2,8 @@
 
 
 template_folder="./source/${CI_SO}"
-tag="${CI_SO}${CI_SO_VER}_jdk1.${CI_JAVA_MAJOR}_${CI_ZOOK_VER}"
-dockerfile_folder="./Dockerfiles/${CI_SO}${CI_SO_VER}/jdk1.${CI_JAVA_MAJOR}/${CI_ZOOK_VER}"
+tag="${CI_SO}${CI_SO_VER}_jdk1.${CI_JAVA_MAJOR}_scala${CI_SCALA_VER}_${CI_KAFKA_VER}"
+dockerfile_folder="./Dockerfiles/${CI_SO}${CI_SO_VER}/jdk1.${CI_JAVA_MAJOR}/scala${CI_SCALA_VER}/${CI_KAFKA_VER}"
 dockerfile_path="${dockerfile_folder}/Dockerfile"
 
 mkdir -p $dockerfile_folder
